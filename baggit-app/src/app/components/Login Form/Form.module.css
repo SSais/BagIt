@@ -18,4 +18,12 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.form button:hover {
+    background-color: #b7dfff;
+    color: #000;
+    cursor: pointer;
 }
