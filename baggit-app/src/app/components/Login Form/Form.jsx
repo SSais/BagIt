@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { supabase } from './lib/SupaBaseClient';
+import { supabase } from '@supabase/supabase-js';
 import styles from "./Form.module.css";
 
 export default function Form() {
