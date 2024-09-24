@@ -1,12 +1,50 @@
-.mapContainer {
-    margin: 0 auto;
-    height: 600px;
-    width: 60%;
-    border: 1px solid rgb(188, 188, 188);
+.mapSearchOnTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 98%;
 }
 
-.errorMessage {
-    color: red;
-    text-align: center;
-    padding: 20px;
+.mapSearchInput {
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+.mapSearchInput input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.appLogo {
+    width: 44px;
+    height: 40px;
+}
+
+.mapSearchButton {
+    padding: 10px 15px;
+    background-color: #FFB6B3;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mapSearchButton:hover {
+    background-color: #0056b3;
 }

@@ -3,19 +3,21 @@
 import React, { useState, useCallback, useRef } from 'react'
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from '@react-google-maps/api'
 import styles from "./Map.module.css";
+import Image from 'next/image';
 
 // You need to replace this with your actual Google Maps API key
 const GOOGLE_MAPS_API_KEY = ''
 
 const locations = [
-  { id: 1, position: { lat: 52.48267771366152, lng: -1.8924990491205056 }, title: "Birmimgham", description: "The Big Apple" },
-  { id: 2, position: { lat: 34.0522, lng: -118.2437 }, title: "Los Angeles", description: "City of Angels" },
-  { id: 3, position: { lat: 41.8781, lng: -87.6298 }, title: "Chicago", description: "The Windy City" },
+  { id: 1, position: { lat: 52.478138895243305, lng: -1.899421831987143 }, title: "Hobbs Birmingham", description: "Women's Clothing Store" },
+  { id: 2, position: { lat: 52.47749794264287, lng: -1.8949004113660612 }, title: "Next", description: "Clothing Store" },
+  { id: 3, position: { lat: 52.4816087570033, lng: -1.8945526185049197 }, title: "The Oasis Fashion Store", description: "Clothing Store" },
 ] /// These are marked locations on the map
 
 const mapContainerStyle = {
   width: '100%',
-  height: '600px'
+  height: '100vh',
+  margin: '0 auto'
 }
 
 export default function MapApp() {
@@ -76,10 +78,10 @@ export default function MapApp() {
   }
 
   return (
-    <div >
-      <div >
-        <h2>Map Search</h2>
-        <div>
+    <div style={{ position: 'relative' }}>
+      <div className={styles.mapSearchOnTop}>
+        <Image className={styles.appLogo} src="/logo.png" alt="BaggIt Logo" width={144} height={160} />
+        <div className={styles.mapSearchInput}>
           <input
             type="text"
             placeholder="Enter location to search"
@@ -87,17 +89,12 @@ export default function MapApp() {
             onChange={(e) => setSearchLocation(e.target.value)}
             aria-label="Search location"
           />
-          <button onClick={handleSearch} >Search</button>
+          <button onClick={handleSearch} className={styles.mapSearchButton}>Search</button>
         </div>
-        <div>
-          <input
-            type="text"
-            placeholder="Current location"
-            value={currentLocation}
-            readOnly
-            aria-label="Current location"
-          />
-          <button onClick={handleCurrentLocation}>Get Current Location</button>
+        <div className={styles.mapSearchInputGeo}>
+          <button onClick={handleCurrentLocation} className={styles.mapSearchButton}>
+            <Image src="/target.png" alt="Current Location" width={20} height={20} />
+          </button>
         </div>
       </div>
 
@@ -105,7 +102,7 @@ export default function MapApp() {
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
           center={center}
-          zoom= {zoom}
+          zoom={zoom}
           onLoad={onLoad}
           onUnmount={onUnmount}
         >
