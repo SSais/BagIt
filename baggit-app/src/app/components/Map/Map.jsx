@@ -93,7 +93,7 @@ export default function MapApp() {
         </div>
         <div className={styles.mapSearchInputGeo}>
           <button onClick={handleCurrentLocation} className={styles.mapSearchButton}>
-            <Image src="/target.png" alt="Get Current Location" width={20} height={20} />
+            <Image src="/target.png" alt="Current Location" width={20} height={20} />
           </button>
         </div>
       </div>
