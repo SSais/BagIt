@@ -1,15 +1,11 @@
-import styles from "./page.module.css";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import Form from "../components/Login Form/Form";
+import Map from "../components/Map/Map";
 import Nav from "../components/Navigation/Nav";
 
-export default function Home() {
+export default function MapPage() {
   return (
-    <main className={styles.main}>
-      <Header />
+    <>
+      <Map />
       <Nav />
-      <Footer />
-    </main>
+    </>
   );
 }
