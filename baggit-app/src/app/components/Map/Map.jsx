@@ -32,7 +32,7 @@ const locations = [
   },
 ]
 
-//fuck me, all that reading and it was literally a single array to add...
+
 const mapStyles = [
   {
     featureType: "poi",
@@ -153,7 +153,7 @@ export default function MapApp() {
           zoom={zoom}
           onLoad={onLoad}
           onUnmount={onUnmount}
-          options={{ styles: mapStyles, streetViewControl: false, zoomControl: false }} //pt2 of removing shit
+          options={{ styles: mapStyles, streetViewControl: false, zoomControl: false }} 
         >
           {locations.map((location) => (
             <Marker
