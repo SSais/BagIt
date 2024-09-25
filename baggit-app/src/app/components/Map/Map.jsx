@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 
 // Remember to replace this with your actual Google Maps API key
-const GOOGLE_MAPS_API_KEY = ''
+const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
 
 
 // This is the map styles which removes the labels from the map
