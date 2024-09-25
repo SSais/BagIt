@@ -159,7 +159,10 @@ export default function MapApp() {
             <Marker
               key={location.id}
               position={location.position}
-              onClick={() => setSelectedLocation(location)}
+              onClick={() => {
+                setSelectedLocation(location);
+                setCenter(location.position);
+              }}
             />
           ))}
         </GoogleMap>
