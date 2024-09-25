@@ -6,7 +6,7 @@ import styles from "./Map.module.css";
 import Image from 'next/image';
 
 // Remember to replace this with your actual Google Maps API key
-const GOOGLE_MAPS_API_KEY = ''
+const GOOGLE_MAPS_API_KEY = 'AIzaSyAssWjDd_39qxlsA-33NVt_0ZOIuHgrMuQ'
 
 // These are marked locations on the map
 const locations = [
@@ -31,6 +31,20 @@ const locations = [
     description: "Clothing Store"
   },
 ]
+
+//fuck me, all that reading and it was literally a single array to add LMAO
+const mapStyles = [
+  {
+    featureType: "poi",
+    elementType: "labels",
+    stylers: [{ visibility: "off" }]
+  },
+  {
+    featureType: "transit",
+    elementType: "labels.icon",
+    stylers: [{ visibility: "off" }]
+  }
+];
 
 // This is the map container styling
 const mapContainerStyle = {
@@ -139,6 +153,7 @@ export default function MapApp() {
           zoom={zoom}
           onLoad={onLoad}
           onUnmount={onUnmount}
+          options={{ styles: mapStyles, streetViewControl: false, zoomControl: false }} //pt2 of removing shit
         >
           {locations.map((location) => (
             <Marker
