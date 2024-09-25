@@ -6,7 +6,7 @@ import styles from "./Map.module.css";
 import Image from 'next/image';
 
 // Remember to replace this with your actual Google Maps API key
-const GOOGLE_MAPS_API_KEY = 'AIzaSyAssWjDd_39qxlsA-33NVt_0ZOIuHgrMuQ'
+const GOOGLE_MAPS_API_KEY = ''
 
 // These are marked locations on the map
 const locations = [
