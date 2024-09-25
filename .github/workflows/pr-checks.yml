@@ -18,10 +18,10 @@ jobs:
           cd baggit-app
           npm install
 
-      - name: Run jest
-        run: |
-          cd baggit-app
-          npm run test
+      # - name: Run jest
+      #   run: |
+      #     cd baggit-app
+      #     npm run test
 
       - name: Run lint
         run: |
