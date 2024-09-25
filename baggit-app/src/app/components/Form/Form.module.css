@@ -1,29 +1,53 @@
-.form {
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.containerForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 50px;
-}
+    height: 70vh;
+    background-color: white;
+    margin: 4rem ;
+    border-radius: 8px;
+  }
 
 .form input {
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #f77e78;
     border-radius: 5px;
 }
 
-.form button {
+.formButton {
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: #ef4d44;
+    border-width: 0cap;
     color: #000;
+    font-family: 'Albert Sans' sans-serif;
 }
 
 .form button:hover {
-    background-color: #b7dfff;
-    color: #000;
+    background-color: #f77e78;
+    color: #ffff;
     cursor: pointer;
 }
+  
+  .formButton {
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f77e78; /* Light red/pink button background */
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .formButton:hover {
+    background-color: #ef4d44;
+  }
+  

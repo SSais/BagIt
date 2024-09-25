@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { supabase } from '@supabase/supabase-js';
-import styles from "./Form.module.css";
+import styles from "./form.module.css";
 
 export default function Form() {
   const [email, setEmail] = useState('');
@@ -32,6 +32,8 @@ export default function Form() {
   };
 
   return (
+    <>
+    <div className={styles.containerForm}>
     <form className={styles.form} onSubmit={handleSubmit}>
       <input
         type="email"
@@ -45,11 +47,16 @@ export default function Form() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="submit">{isSignUp ? 'Sign Up' : 'Login'}</button>
+      <button className={styles.formButton} type="submit">{isSignUp ? 'Sign Up' : 'Login'}</button>
       {error && <p className={styles.error}>{error}</p>}
       <p onClick={() => setIsSignUp(!isSignUp)}>
         {isSignUp ? 'Already have an account? Login' : 'Don\'t have an account? Sign Up'}
       </p>
     </form>
+    </div>
+    </>
   );
 }
+
+
+

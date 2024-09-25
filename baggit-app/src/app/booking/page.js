@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
 import Nav from "../components/Navigation/Nav";
-import Form from "../components/Form/Form";
+import Form from "../components/Form/form";
 
 export default function Booking() {
   return (

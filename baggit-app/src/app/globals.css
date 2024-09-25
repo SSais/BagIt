@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato';
+    font-family: 'Albert Sans', sans-serif;
     color: #1e1e1e;
 }

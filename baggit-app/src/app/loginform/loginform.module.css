@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.form input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formButton {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ef4d44;
+    border-width: 0cap;
+    color: #000;
+    font-family: 'Albert Sans' sans-serif;
+}
+
+.form button:hover {
+    background-color: #f77e78;
+    color: #ffff;
+    cursor: pointer;
+}
+
+  .containerLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    background-color: white;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 8px;
+  }
+  
+  .logo {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 60%;
+    height: 60%;
+  }
+  
+  
+  .buttonGroup {
+    text-align: center;
+    height: 40vh;
+    margin-bottom: 2rem; /* Space between the button group and the login button */
+  }
+  
+  .buttonGroup p {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .buttonSign {
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f77e78;
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .buttonSign:hover {
+    background-color: #ef4d44;
+  }
+  
+  .buttonLogIn {
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f77e78;
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .buttonLogIn:hover {
+    background-color: #ef4d44;
+  }
+  
+  .containerLogIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    background-color: white;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 8px;
+  }

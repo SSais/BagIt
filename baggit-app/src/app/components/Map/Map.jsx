@@ -112,7 +112,7 @@ export default function MapApp() {
   return (
     <div style={{ position: 'relative' }}>
       <div className={styles.mapSearchOnTop}>
-        <Image className={styles.appLogo} src="/logo.png" alt="BaggIt Logo" width={144} height={160} />
+        <Image className={styles.appLogo} src="/LogoBagRed.png" alt="BaggIt Logo" width={144} height={160} />
         <div className={styles.mapSearchInput}>
           <input
             type="text"
