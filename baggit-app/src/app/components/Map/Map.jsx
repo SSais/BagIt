@@ -7,9 +7,10 @@ import Image from 'next/image';
 
 
 // Remember to replace this with your actual Google Maps API key
-const GOOGLE_MAPS_API_KEY = ''
+const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
 
 
+// This is the map styles which removes the labels from the map
 const mapStyles = [
   {
     featureType: "poi",
@@ -95,7 +96,7 @@ export default function MapApp({ markerLocations }) {
     }
   }
 
-  // Add this new function to handle closing the pop-up
+  // This is the  function to handle closing the pop-up
   const handleClosePopup = () => {
     setSelectedLocation(null);
   };
@@ -107,7 +108,7 @@ export default function MapApp({ markerLocations }) {
         <div className={styles.mapSearchInput}>
           <input
             type="text"
-            placeholder="Enter location to search" 
+            placeholder="Enter location to search"
             value={searchLocation}
             onChange={(e) => setSearchLocation(e.target.value)}
             aria-label="Search location"
@@ -130,7 +131,7 @@ export default function MapApp({ markerLocations }) {
           zoom={zoom}
           onLoad={onLoad}
           onUnmount={onUnmount}
-          options={{ styles: mapStyles, streetViewControl: false, zoomControl: false }} 
+          options={{ styles: mapStyles, streetViewControl: false, zoomControl: false }}
         >
           {markerLocations && markerLocations.map((location) => (
             <Marker
@@ -138,8 +139,8 @@ export default function MapApp({ markerLocations }) {
               position={location.position}
               onClick={() => setSelectedLocation(location)}
               icon={{
-                url:'/marker.png',
-                scaledSize: new window.google.maps.Size(30, 40),
+                url: '/marker.png',
+                scaledSize: new window.google.maps.Size(40, 50),
                 origin: new window.google.maps.Point(0, 0),
                 anchor: new window.google.maps.Point(16, 32),
               }}
@@ -156,9 +157,13 @@ export default function MapApp({ markerLocations }) {
             <button className={styles.closeButton} onClick={handleClosePopup}>
               &times;
             </button>
-            <Image src={selectedLocation.image} alt={selectedLocation.title} width={100} height={100} />
             <h2>{selectedLocation.title}</h2>
             <p>{selectedLocation.description}</p>
+
+            <Image src={selectedLocation.image} alt={selectedLocation.title} width={100} height={100} />
+            <Image src={selectedLocation.image} alt={selectedLocation.title} width={100} height={100} />
+            <Image src={selectedLocation.image} alt={selectedLocation.title} width={100} height={100} />
+
             <a href={selectedLocation.link} target="_blank" rel="noopener noreferrer" className={styles.visitLink}>
               Visit {selectedLocation.title}
             </a>
