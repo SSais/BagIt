@@ -32,7 +32,7 @@ const locations = [
   },
 ]
 
-//fuck me, all that reading and it was literally a single array to add
+//fuck me, all that reading and it was literally a single array to add...
 const mapStyles = [
   {
     featureType: "poi",
