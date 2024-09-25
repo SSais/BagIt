@@ -32,6 +32,20 @@ const locations = [
   },
 ]
 
+//fuck me, all that reading and it was literally a single array to add...
+const mapStyles = [
+  {
+    featureType: "poi",
+    elementType: "labels",
+    stylers: [{ visibility: "off" }]
+  },
+  {
+    featureType: "transit",
+    elementType: "labels.icon",
+    stylers: [{ visibility: "off" }]
+  }
+];
+
 // This is the map container styling
 const mapContainerStyle = {
   width: '100%',
@@ -139,6 +153,7 @@ export default function MapApp() {
           zoom={zoom}
           onLoad={onLoad}
           onUnmount={onUnmount}
+          options={{ styles: mapStyles, streetViewControl: false, zoomControl: false }} //pt2 of removing shit
         >
           {locations.map((location) => (
             <Marker
