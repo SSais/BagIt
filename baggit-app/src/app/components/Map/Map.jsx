@@ -5,32 +5,10 @@ import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import styles from "./Map.module.css";
 import Image from 'next/image';
 
+
 // Remember to replace this with your actual Google Maps API key
 const GOOGLE_MAPS_API_KEY = ''
 
-// These are marked locations on the map
-const locations = [
-  {
-    id: 1,
-    position: { lat: 52.478138895243305, lng: -1.899421831987143 },
-    title: "Hobbs Birmingham",
-    description: "Women's Clothing Store",
-    image: "/home.png",
-    link: "https://www.hobbs.co.uk/"
-  },
-  {
-    id: 2,
-    position: { lat: 52.47749794264287, lng: -1.8949004113660612 },
-    title: "Next",
-    description: "Clothing Store"
-  },
-  {
-    id: 3,
-    position: { lat: 52.4816087570033, lng: -1.8945526185049197 },
-    title: "The Oasis Fashion Store",
-    description: "Clothing Store"
-  },
-]
 
 // This is the map styles which removes the labels from the map
 const mapStyles = [
@@ -54,7 +32,7 @@ const mapContainerStyle = {
 }
 
 // This is the map app
-export default function MapApp() {
+export default function MapApp({ markerLocations }) {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: GOOGLE_MAPS_API_KEY
@@ -155,7 +133,7 @@ export default function MapApp() {
           onUnmount={onUnmount}
           options={{ styles: mapStyles, streetViewControl: false, zoomControl: false }}
         >
-          {locations.map((location) => (
+          {markerLocations && markerLocations.map((location) => (
             <Marker
               key={location.id}
               position={location.position}
