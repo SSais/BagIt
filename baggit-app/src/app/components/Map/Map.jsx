@@ -4,7 +4,6 @@ import React, { useState, useCallback, useRef } from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import styles from "./Map.module.css";
 import Image from 'next/image';
-import supabase from '../../../config/supabaseClient.js';
 
 
 // Remember to replace this with your actual Google Maps API key
