@@ -57,14 +57,14 @@
     margin-left: 10px;
     border: none;
     border-radius: 20px;
-    background-color: #5939C4;
+    background-color: #FF362C;
     padding: 5px;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(89, 57, 196, 0.3);
+    box-shadow: 0 2px 5px rgba(255, 54, 44, 0.3);
 }
 
 .mapSearchInputGeo:hover {
-    background-color: #7A5FE0;
+    background-color: #FF362C;
 }
 
 .mapSearchInputGeoImg {
@@ -83,32 +83,32 @@
     font-size: 1rem;
     text-decoration: none;
     border-radius: 20px;
-    border: 2px solid #5939C4;
-    background-color: #5939C4;
+    border: 2px solid #FF362C;
+    background-color: #FF362C;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(89, 57, 196, 0.1);
+    box-shadow: 0 2px 5px rgba(255, 54, 44, 0.1);
     flex-shrink: 0;
 }
 
 .mapSearchButton:hover {
-    background-color: #5939C4;
+    background-color: #FF362C;
     color: white;
 }
 
 /* Popup styles */
 .popupContainer {
     position: fixed;
+    height: 60vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.3s ease-out;
+    z-index: 1000;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 50vh;
-    background-color: white;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slideUp 0.3s ease-out;
 }
 
 .popupContent {
@@ -132,16 +132,16 @@
     display: inline-block;
     margin-top: 10px;
     padding: 12px 24px;
-    background-color: #5939C4;
+    background-color: #FF362C;
     color: white;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
-    box-shadow: 0 2px 5px rgba(89, 57, 196, 0.3);
+    box-shadow: 0 2px 5px rgba(255, 54, 44, 0.3);
 }
 
 .visitLink:hover {
-    background-color: #7A5FE0;
+    background-color: #FF362C;
 }
 
 /* Animation */
