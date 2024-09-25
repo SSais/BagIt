@@ -14,13 +14,21 @@ jobs:
         uses: actions/setup-node@v3 
 
       - name: Install all dependencies  
-        run: npm install
+        run: |
+          cd baggit-app
+          npm install
 
       - name: Run jest
-        run: npm run test
+        run: |
+          cd baggit-app
+          npm run test
 
       - name: Run lint
-        run: npm run lint
+        run: |
+          cd baggit-app
+          npm run lint
 
       - name: Run prettier
-        run: npm run format
+        run: |
+          cd baggit-app
+          npm run format
