@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "format": "prettier write ."
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.8",
