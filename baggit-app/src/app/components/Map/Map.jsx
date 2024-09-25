@@ -140,7 +140,10 @@ export default function MapApp({ markerLocations }) {
             <Marker
               key={location.id}
               position={location.position}
-              onClick={() => setSelectedLocation(location)}
+              onClick={() => {
+                setSelectedLocation(location);
+                setCenter(location.position);
+              }}
               icon={{
                 url: '/marker.png',
                 scaledSize: new window.google.maps.Size(40, 50),
