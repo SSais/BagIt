@@ -114,8 +114,25 @@
 .popupContent {
     width: 100%;
     max-width: 600px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+}
+
+.popupContentTitle {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.popupContentImage {
+    width: 300px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.popupContentSmallAvailabilitySpan {
+    font-weight: bold;
 }
 
 .closeButton {
@@ -142,6 +159,13 @@
 
 .visitLink:hover {
     background-color: #FF362C;
+}
+
+.popupContentHr {
+    border: 2px solid #d1d1d1;
+    border-radius: 10px;
+    width: 40%;
+    margin: 0 auto;
 }
 
 /* Animation */

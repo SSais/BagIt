@@ -4,10 +4,13 @@ import React, { useState, useCallback, useRef } from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import styles from "./Map.module.css";
 import Image from 'next/image';
+import { Lato } from 'next/font/google';
 
 
 // Remember to replace this with your actual Google Maps API key
-const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+const GOOGLE_MAPS_API_KEY = 'AIzaSyA10TPXceASLQfHXKmA-64MfLdXm-sCxaw'
+// process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+
 
 
 // This is the map styles which removes the labels from the map
@@ -154,18 +157,21 @@ export default function MapApp({ markerLocations }) {
       {selectedLocation && (
         <div className={styles.popupContainer}>
           <div className={styles.popupContent}>
+            <hr className={styles.popupContentHr} />
             <button className={styles.closeButton} onClick={handleClosePopup}>
               &times;
             </button>
-            <h2>{selectedLocation.title}</h2>
-            <p>{selectedLocation.description}</p>
 
-            <Image src={selectedLocation.image} alt={selectedLocation.title} width={100} height={100} />
-            <Image src={selectedLocation.image} alt={selectedLocation.title} width={100} height={100} />
-            <Image src={selectedLocation.image} alt={selectedLocation.title} width={100} height={100} />
-
+            <h2 className={styles.popupContentTitle}  >{selectedLocation.title}</h2>
+            <p className={styles.popupContentOpeningHours}>{selectedLocation.openingHours}hrs - {selectedLocation.closingHours}hrs</p>
+            <p className={styles.popupContentOpeningDays}>{selectedLocation.openingDays}</p>
+            <p className={styles.popupContentSmallAvailability}>
+              <span className={styles.popupContentSmallAvailabilitySpan}>Space Available: </span>
+              {selectedLocation.smallAvailability} small bags, {selectedLocation.largeAvailability} large bags</p>
+            {/* <Image src={selectedLocation.image} alt='Image of the store' width={100} height={100} /> */}
+            <Image className={styles.popupContentImage} src='/storehobbs.png' alt='Image of the store' width={100} height={100} />
             <a href={selectedLocation.link} target="_blank" rel="noopener noreferrer" className={styles.visitLink}>
-              Visit {selectedLocation.title}
+              Book Now
             </a>
           </div>
         </div>
