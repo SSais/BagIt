@@ -161,7 +161,7 @@ export default function MapApp() {
               position={location.position}
               onClick={() => {
                 setSelectedLocation(location);
-                setCenter(location.position);
+                
               }}
             />
           ))}
