@@ -137,7 +137,10 @@ export default function MapApp({ markerLocations }) {
               position={location.position}
               onClick={() => {
                 setSelectedLocation(location);
-                setCenter(location.position);
+                setCenter({
+                  lat: location.position.lat - 0.003,
+                  lng: location.position.lng,
+              });
               }}
               icon={{
                 url: '/marker.png',
