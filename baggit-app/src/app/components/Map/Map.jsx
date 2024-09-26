@@ -5,10 +5,8 @@ import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import styles from "./Map.module.css";
 import Image from 'next/image';
 
-
 // Remember to replace this with your actual Google Maps API key
 const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
-
 
 // This is the map styles which removes the labels from the map
 const mapStyles = [
@@ -163,15 +161,21 @@ export default function MapApp({ markerLocations }) {
             </button>
 
             <h2 className={styles.popupContentTitle}  >{selectedLocation.title}</h2>
-            <p className={styles.popupContentOpeningHours}>{selectedLocation.openingHours}hrs - {selectedLocation.closingHours}hrs</p>
+
+            <p className={styles.popupContentOpeningHours}>Opening Times:
+              {selectedLocation.openingHours}hrs - {selectedLocation.closingHours}hrs</p>
+
             <p className={styles.popupContentOpeningDays}>{selectedLocation.openingDays}</p>
+
+            <p>Rating: <span>* 5 (2+ reviews)</span></p>
+
             <p className={styles.popupContentSmallAvailability}>
               <span className={styles.popupContentSmallAvailabilitySpan}>Space Available: </span>
               {selectedLocation.smallAvailability} small bags, {selectedLocation.largeAvailability} large bags</p>
             {/* <Image src={selectedLocation.image} alt='Image of the store' width={100} height={100} /> */}
             <Image className={styles.popupContentImage} src='/storehobbs.png' alt='Image of the store' width={100} height={100} />
-            <a href={selectedLocation.link} target="_blank" rel="noopener noreferrer" className={styles.visitLink}>
-              Book Now
+            <a href='https://baggit-app.vercel.app/storeinfo' className={styles.visitLink}>
+              Details
             </a>
           </div>
         </div>
