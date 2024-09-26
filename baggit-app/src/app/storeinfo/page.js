@@ -91,7 +91,7 @@ const App = () => {
       <Image src="/emptystar.png" alt="empty star" width={15} height={15} />
       
       </div>
-      <p>"Efficient service, but the storage space was cramped. My bags were safe, though, so no major complaints."</p>
+      <p>&quot;Efficient service, but the storage space was cramped. My bags were safe, though, so no major complaints.&quot;</p>
       <div>
       <h3>David</h3>
       <Image src="/completedstar.png" alt="full star" width={15} height={15} />
@@ -100,7 +100,7 @@ const App = () => {
       <Image src="/completedstar.png" alt="full star" width={15} height={15} />
       <Image src="/completedstar.png" alt="full star" width={15} height={15} />
       </div>
-      <p>Wonderful app!</p>
+      <p>&quot;Wonderful app!&quot;</p>
       <div>
       <h3>Mike</h3>
       <Image src="/completedstar.png" alt="full star" width={15} height={15} />
@@ -109,7 +109,7 @@ const App = () => {
       <Image src="/emptystar.png" alt="full star" width={15} height={15} />
       <Image src="/emptystar.png" alt="full star" width={15} height={15} />
       </div>
-      <p>This shop had great bag security but the shopkeeper was very impolite. I would recommend walking further to a different store.</p>
+      <p>&quot;This shop had great bag security but the shopkeeper was very impolite. I would recommend walking further to a different store.&quot;</p>
       {/* About Section */}
       <div className={styles.aboutApp}>
         <h3>About Bag Storage App</h3>
