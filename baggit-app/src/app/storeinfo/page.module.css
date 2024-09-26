@@ -138,3 +138,20 @@
     font-size: 0.8rem;
     color: #555;
   }
+
+  .protection {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .smallButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+  }
