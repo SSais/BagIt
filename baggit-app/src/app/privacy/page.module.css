@@ -1,40 +1,57 @@
 .privacyContainer {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px;
-    font-family: Arial, sans-serif;
+    max-width: 50rem;
+    padding: 2.5rem;
+    text-align: justify;
+}
+
+.privacyContainer h1 {
+    text-align: center;
+}
+
+.effectiveDate {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.section .subheading {
+    margin: 1.5rem;
+    text-align: center;
 }
 
 .heading {
     color: #EF4D44;
+    margin-bottom: 1.5rem;
 }
 
 .spacer {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .h1,
 .h2 .h3 {
     color: #333;
+    margin-bottom: 1.5rem;
 }
 
 .sectionHeading {
-    margin-bottom: 20px;
-    text-align: justify;
+    margin: 1rem;
+    text-align: center;
 }
 
 .ul {
     list-style: none;
     padding-left: 4rem;
+    margin-bottom: 2rem;
 }
 
 .ul .li {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .a {
     color: #007BFF;
     text-decoration: none;
+    margin-bottom: 0.5rem;
 }
 
 .a:hover {

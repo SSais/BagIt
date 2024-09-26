@@ -2,9 +2,9 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 3.75rem;
     background-color: #ffffff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .navList {
@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 5px;
+    padding: 0.3125rem;
     list-style: none;
 }
 
@@ -29,20 +29,20 @@
 }
 
 .navIcon {
-    margin-bottom: 2px;
-    width: 24px;
-    height: 24px;
+    margin-bottom: 0.125rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 /* Media query for larger screens */
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 26.875rem) {
     .nav {
-        height: 90px;
+        height: 5.625rem;
     }
 
     .navList {
-        padding: 10px;
-        margin: 10px;
+        padding: 0.625rem;
+        margin: 0.625rem;
     }
 
     .navLink {
@@ -50,8 +50,8 @@
     }
 
     .navIcon {
-        margin-bottom: 5px;
-        width: 28px;
-        height: 28px;
+        margin-bottom: 0.3125rem;
+        width: 1.75rem;
+        height: 1.75rem;
     }
 }

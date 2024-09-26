@@ -1,35 +1,21 @@
-.form input {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.formButton {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #ef4d44;
-  border-width: 0cap;
-  color: #000;
-  font-family: 'Albert Sans'sans-serif;
-}
-
-.form button:hover {
-  background-color: #f77e78;
-  color: #ffff;
-  cursor: pointer;
-}
-
-.containerLogo {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30vh;
-  background-color: white;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.containerLogo,
+.containerLogIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   max-width: 400px;
-  margin: auto;
+  padding: 2rem;
   border-radius: 8px;
 }
 
@@ -42,12 +28,47 @@
   margin-bottom: 20px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formButton,
+.buttonSign,
+.buttonLogIn {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+}
+
+.formButton:hover,
+.buttonSign:hover,
+.buttonLogIn:hover {
+  background-color: #f77e78;
+}
 
 .buttonGroup {
-  text-align: center;
-  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 2rem;
-  /* Space between the button group and the login button */
 }
 
 .buttonGroup p {
@@ -62,8 +83,9 @@
   font-size: 16px;
   border-radius: 5px;
   border: none;
-  background-color: #f77e78;
-  color: white;
+  background-color: #ffffff;
+  border: 0.1rem solid #f77e78;
+  color: #f77e78;
   cursor: pointer;
   width: 200px;
   text-align: center;
