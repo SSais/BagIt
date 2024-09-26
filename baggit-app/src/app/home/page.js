@@ -13,7 +13,7 @@ export default function MapPage() {
     async function fetchLocations() {
       setIsLoading(true);
       const { data, error } = await supabase.from("storeLocations").select("*");
-      console.log(data);
+      
       if (error) {
         console.log("error", error);
         setIsLoading(false);
@@ -34,7 +34,6 @@ export default function MapPage() {
 
       setmarkerLocations(formattedLocations);
       setIsLoading(false);
-      console.log(markerLocations);
     }
     fetchLocations();
   }, []);
