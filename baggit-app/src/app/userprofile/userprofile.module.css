@@ -1,12 +1,6 @@
-.body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Light grey background */
-  }
+
   
   .container {
-    max-width: 400px;
     margin: auto;
     padding: 20px;
     background-color: white;
@@ -41,7 +35,7 @@
     margin-bottom: 10px;
   }
   
-  .bookingDuration .options {
+  .bookingDurationContainer {
     display: flex;
     justify-content: space-around;
   }
@@ -56,17 +50,23 @@
     transition: background-color 0.3s ease;
   }
   
-  .bookingDuration .option:hover {
+  .bookingDurationOption:hover {
     background-color: #f1f1f1;
   }
   
+  .bookingText {
+    margin-top: 0.4rem;
+    color: #555;
+    font-size: 0.8rem;
+  }
+
   .buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
   
-  .buttons .button {
+  .buttonsButton {
     padding: 12px;
     font-size: 16px;
     text-align: center;
@@ -78,18 +78,25 @@
     transition: all 0.3s ease;
   }
   
-  .buttons .button:hover {
+  .buttonsButton:hover {
     background-color: #ff4d4d;
     color: white;
   }
   
-  .buttons .pay-now {
+  .buttonsPayNow {
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #ff4d4d;
+    border-radius: 5px;
     background-color: #ff4d4d;
     color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
     font-weight: bold;
   }
   
-  .buttons .payNow:hover {
+  .buttonsPayNow:hover {
     background-color: #e60000;
   }
   
@@ -124,40 +131,20 @@
     margin-top: 20px;
   }
   
+  .aboutApp img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
   .aboutApp h3 {
     font-size: 18px;
     color: #333;
+    margin: 0;
   }
   
   .aboutApp p {
-    font-size: 14px;
+    margin: 0;
+    font-size: 0.8rem;
     color: #555;
   }
-  
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    border-top: 1px solid #ddd;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-  }
-  
-  .footer .footerItem {
-    text-align: center;
-    color: #555;
-  }
-  
-  .footer .footerItem img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .footer .footerItem span {
-    display: block;
-    font-size: 12px;
-  }
-  

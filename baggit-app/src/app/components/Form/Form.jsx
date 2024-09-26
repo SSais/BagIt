@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { supabase } from '@supabase/supabase-js';
+// import { supabase } from '@supabase/supabase-js';
 import styles from "./form.module.css";
 
 export default function Form() {
@@ -35,7 +35,7 @@ export default function Form() {
     <>
     <div className={styles.containerForm}>
     <form className={styles.form} onSubmit={handleSubmit}>
-      <input
+      <input 
         type="email"
         placeholder="Email"
         value={email}

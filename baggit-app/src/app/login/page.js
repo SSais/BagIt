@@ -1,5 +1,5 @@
 import Form from "../components/Form/form";
-import styles from "./page.module.css";
+import styles from "./login.module.css";
 import React from 'react';
 
 

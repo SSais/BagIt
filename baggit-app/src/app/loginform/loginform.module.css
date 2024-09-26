@@ -29,20 +29,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 30vh;
+    height: 44vh;
     background-color: white;
-    max-width: 400px;
+    max-width: 500px;
     margin: auto;
     border-radius: 8px;
   }
   
   .logo {
-    width: 15rem;
-    height: 15rem;
+    width: 19rem;
+    height: 19rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
   
   .logo img {
@@ -53,7 +54,7 @@
   
   .buttonGroup {
     text-align: center;
-    height: 40vh;
+    height: 38vh;
     margin-bottom: 2rem; /* Space between the button group and the login button */
   }
   
@@ -64,7 +65,7 @@
   }
   
   .buttonSign {
-    padding: 10px 20px;
+    padding: 10px 10px;
     margin: 10px 0;
     font-size: 16px;
     border-radius: 5px;
@@ -72,7 +73,7 @@
     background-color: #f77e78;
     color: white;
     cursor: pointer;
-    width: 200px;
+    width: 100px;
     text-align: center;
   }
   
@@ -81,7 +82,7 @@
   }
   
   .buttonLogIn {
-    padding: 10px 20px;
+    padding: 10px 10px;
     margin: 10px 0;
     font-size: 16px;
     border-radius: 5px;
@@ -102,7 +103,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 30vh;
+    height: 28vh;
     background-color: white;
     max-width: 400px;
     margin: auto;

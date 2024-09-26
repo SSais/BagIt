@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: 50vh;
     background-color: white;
     margin: 4rem ;
     border-radius: 8px;
@@ -16,38 +16,23 @@
     padding: 10px;
     border: 1px solid #f77e78;
     border-radius: 5px;
+    width: 100%;
 }
 
 .formButton {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #ef4d44;
-    border-width: 0cap;
-    color: #000;
-    font-family: 'Albert Sans' sans-serif;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f77e78;
+  color: white;
+  cursor: pointer;
+  text-align: center;
 }
 
-.form button:hover {
-    background-color: #f77e78;
-    color: #ffff;
-    cursor: pointer;
+.formButton:hover {
+    background-color: #ef4d44;
 }
   
-  .formButton {
-    padding: 10px 20px;
-    margin: 10px 0;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    background-color: #f77e78; /* Light red/pink button background */
-    color: white;
-    cursor: pointer;
-    width: 200px;
-    text-align: center;
-  }
-  
-  .formButton:hover {
-    background-color: #ef4d44;
-  }
   
