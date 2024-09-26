@@ -6,15 +6,20 @@ import Image from 'next/image';
 const App = () => {
   return (
     <>
-    <p>Add review, add star rating also add how many people people have a review for taht star. showhaow far the store is from your location
-      Adress will be show after booking
-      Protection up to £5,000
+      {/* User Section
+      <div className={styles.userSection}>
+        <div className={styles.userInfo}>
+          <Image src="/baggitLogoRed.svg" alt="LogoBaggIt" width={40} height={40} />
+          <div>
+            <h4>John Doe</h4>
+            <p>Welcome back!</p>
+          </div>
+        </div>
+      </div> */}
 
-
-      Review section 
-    </p>
     <div className={styles.container}>
       {/* Location Description */}
+      <div className={styles.title}>Location Title</div>
       <div className={styles.locationDescription}>
         <h2>Location description</h2>
         <div className={styles.details}>
@@ -22,6 +27,14 @@ const App = () => {
           <p><strong>Features:</strong> Large and small bags allowed</p>
         </div>
       </div>
+
+      <p>Add review, add star rating also add how many people people have a review for taht star. showhaow far the store is from your location
+      Adress will be show after booking
+      Protection up to £5,000
+
+
+      Review section 
+    </p><br></br>
 
       {/* Select Booking Duration */}
       <div className={styles.bookingDuration}>
@@ -42,22 +55,16 @@ const App = () => {
         <div className={styles.buttonsPayNow}>Pay Now</div>
       </div>
 
-      {/* User Section */}
-      <div className={styles.userSection}>
-        <div className={styles.userInfo}>
-          <Image src="/baggitLogoRed.svg" alt="LogoBaggIt" width={40} height={40} />
-          <div>
-            <h4>John Doe</h4>
-            <p>Welcome back!</p>
-          </div>
-        </div>
-      </div>
+
 
       {/* About Section */}
       <div className={styles.aboutApp}>
         <h3>About Bag Storage App</h3>
-        <p>How it works: Simply choose a location, select a time, and pay securely. Read more about our <a href='/terms'> Terms and Conditions </a> </p>
+        <p>How it works: Simply choose a location, select a time, and pay securely. Read more about our <a href='/terms'> Terms and Conditions </a> </p><br></br>
       </div>
+
+
+
     </div>
     <Nav />
   </>
