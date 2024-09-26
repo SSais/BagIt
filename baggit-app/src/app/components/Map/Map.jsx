@@ -155,31 +155,56 @@ export default function MapApp({ markerLocations }) {
       {selectedLocation && (
         <div className={styles.popupContainer}>
           <div className={styles.popupContent}>
+
             <hr className={styles.popupContentHr} />
+
             <button className={styles.closeButton} onClick={handleClosePopup}>
               &times;
             </button>
 
-            <h2 className={styles.popupContentTitle}  >{selectedLocation.title}</h2>
+            <h2 className={styles.popupContentTitle}>
+              {selectedLocation.title}
+            </h2>
 
-            <p className={styles.popupContentOpeningHours}>Opening Times:
-              {selectedLocation.openingHours}hrs - {selectedLocation.closingHours}hrs</p>
+            <div className={styles.popupContainerInfoWrapper}>
+              <p className={styles.popupContentOpeningHours}>
+                <span className={styles.popupContentOpeningHoursSpan}>Opening Times: </span>{selectedLocation.openingDays} {selectedLocation.openingHours}hrs
+                - {selectedLocation.closingHours}hrs
+              </p>
 
-            <p className={styles.popupContentOpeningDays}>{selectedLocation.openingDays}</p>
+              <p className={styles.popupContentOpeningDays}>
 
-            <p>Rating: <span>* 5 (2+ reviews)</span></p>
+              </p>
 
-            <p className={styles.popupContentSmallAvailability}>
-              <span className={styles.popupContentSmallAvailabilitySpan}>Space Available: </span>
-              {selectedLocation.smallAvailability} small bags, {selectedLocation.largeAvailability} large bags</p>
-            {/* <Image src={selectedLocation.image} alt='Image of the store' width={100} height={100} /> */}
+              <p><span className={styles.popupContentRatingSpan}>Rating: </span>
+                <Image src='/star50px.png' alt='star' width={15} height={13} />
+                <Image src='/star50px.png' alt='star' width={15} height={13} />
+                <Image src='/star50px.png' alt='star' width={15} height={13} />
+                <Image src='/star50px.png' alt='star' width={15} height={13} />
+                <Image src='/star50px.png' alt='star' width={15} height={13} /> (2+ reviews)</p>
+
+              <p className={styles.popupContentSmallAvailability}>
+                <span
+                  className={styles.popupContentSmallAvailabilitySpan}>
+                  Space Available: </span>
+
+                {selectedLocation.smallAvailability} small bags, {selectedLocation.largeAvailability} large bags
+              </p>
+
+            </div>
+
             <Image className={styles.popupContentImage} src='/storehobbs.png' alt='Image of the store' width={100} height={100} />
-            <a href='https://baggit-app.vercel.app/storeinfo' className={styles.visitLink}>
+
+            <button onClick={
+              () => window.location.href = 'https://baggit-app.vercel.app/storeinfo'}
+              className={styles.visitLink}>
               Details
-            </a>
+            </button>
+
           </div>
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   )
 }

@@ -3,6 +3,37 @@
     justify-content: center;
     align-items: center;
     height: 20vh;
-    font-family: "Albert Sans", sans-serif;
-    color: #ef4d44;
+    font-family: “Albert Sans”, sans-serif;
+    color: #EF4D44;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background-color: white;
+    margin: 4rem;
+    border-radius: 8px;
+}
+
+.form input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #F77E78;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.formButton {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #F77E78;
+    color: white;
+    cursor: pointer;
+    text-align: center;
 }
