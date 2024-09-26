@@ -4,13 +4,10 @@ import React, { useState, useCallback, useRef } from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import styles from "./Map.module.css";
 import Image from 'next/image';
-import { Lato } from 'next/font/google';
 
 
 // Remember to replace this with your actual Google Maps API key
-const GOOGLE_MAPS_API_KEY = 'AIzaSyA10TPXceASLQfHXKmA-64MfLdXm-sCxaw'
-// process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
-
+const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
 
 
 // This is the map styles which removes the labels from the map

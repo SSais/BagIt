@@ -1,0 +1,42 @@
+.termsContainer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  .title {
+    color: #ef4d44;
+  }
+
+  .spacer {
+    margin-bottom: 20px;
+  }
+  .h1, .h2 {
+    color: #333;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .ul {
+    list-style: none;
+    padding-left: 4rem;
+  }
+  
+  .ul .li {
+    margin-bottom: 10px;
+  }
+  
+  .a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .a:hover {
+    text-decoration: underline;
+  }
+  

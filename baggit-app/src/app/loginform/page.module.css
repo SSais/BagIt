@@ -1,0 +1,8 @@
+.logIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-family: "Albert Sans", sans-serif;
+    color: #ef4d44;
+}

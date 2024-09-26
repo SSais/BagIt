@@ -10,7 +10,7 @@ export default function LoginPage() {
     <>
     <div className={styles.containerLogo}>
       <div className={styles.logo}>
-          <Image src="/baggitLogoRed.svg" alt="LogoBaggIt" width={100} height={100} />
+          <Image src="/baggitLogoRed.svg" alt="LogoBaggIt" width={150} height={150} />
       </div>
     </div>
     <div className={styles.buttonGroup}>
