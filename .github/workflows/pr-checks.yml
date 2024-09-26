@@ -1,0 +1,34 @@
+name: Lint, Test, & Format
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  lint-test-format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node JS
+        uses: actions/setup-node@v3 
+
+      - name: Install all dependencies  
+        run: |
+          cd baggit-app
+          npm install
+
+      # - name: Run jest
+      #   run: |
+      #     cd baggit-app
+      #     npm run test
+
+      - name: Run lint
+        run: |
+          cd baggit-app
+          npm run lint
+
+      - name: Run prettier
+        run: |
+          cd baggit-app
+          npm run format

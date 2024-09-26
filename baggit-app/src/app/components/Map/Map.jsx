@@ -4,33 +4,28 @@ import React, { useState, useCallback, useRef } from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
 import styles from "./Map.module.css";
 import Image from 'next/image';
+import { Lato } from 'next/font/google';
+
 
 // Remember to replace this with your actual Google Maps API key
-const GOOGLE_MAPS_API_KEY = ''
+const GOOGLE_MAPS_API_KEY = 'AIzaSyA10TPXceASLQfHXKmA-64MfLdXm-sCxaw'
+// process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
 
-// These are marked locations on the map
-const locations = [
+
+
+// This is the map styles which removes the labels from the map
+const mapStyles = [
   {
-    id: 1,
-    position: { lat: 52.478138895243305, lng: -1.899421831987143 },
-    title: "Hobbs Birmingham",
-    description: "Women's Clothing Store",
-    image: "/home.png",
-    link: "https://www.hobbs.co.uk/"
+    featureType: "poi",
+    elementType: "labels",
+    stylers: [{ visibility: "off" }]
   },
   {
-    id: 2,
-    position: { lat: 52.47749794264287, lng: -1.8949004113660612 },
-    title: "Next",
-    description: "Clothing Store"
-  },
-  {
-    id: 3,
-    position: { lat: 52.4816087570033, lng: -1.8945526185049197 },
-    title: "The Oasis Fashion Store",
-    description: "Clothing Store"
-  },
-]
+    featureType: "transit",
+    elementType: "labels.icon",
+    stylers: [{ visibility: "off" }]
+  }
+];
 
 // This is the map container styling
 const mapContainerStyle = {
@@ -40,7 +35,7 @@ const mapContainerStyle = {
 }
 
 // This is the map app
-export default function MapApp() {
+export default function MapApp({ markerLocations }) {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: GOOGLE_MAPS_API_KEY
@@ -104,7 +99,7 @@ export default function MapApp() {
     }
   }
 
-  // Add this new function to handle closing the pop-up
+  // This is the  function to handle closing the pop-up
   const handleClosePopup = () => {
     setSelectedLocation(null);
   };
@@ -116,7 +111,7 @@ export default function MapApp() {
         <div className={styles.mapSearchInput}>
           <input
             type="text"
-            placeholder="Enter location to search" 
+            placeholder="Enter location to search"
             value={searchLocation}
             onChange={(e) => setSearchLocation(e.target.value)}
             aria-label="Search location"
@@ -139,12 +134,22 @@ export default function MapApp() {
           zoom={zoom}
           onLoad={onLoad}
           onUnmount={onUnmount}
+          options={{ styles: mapStyles, streetViewControl: false, zoomControl: false }}
         >
-          {locations.map((location) => (
+          {markerLocations && markerLocations.map((location) => (
             <Marker
               key={location.id}
               position={location.position}
-              onClick={() => setSelectedLocation(location)}
+              onClick={() => {
+                setSelectedLocation(location);
+                setCenter(location.position);
+              }}
+              icon={{
+                url: '/marker.png',
+                scaledSize: new window.google.maps.Size(40, 50),
+                origin: new window.google.maps.Point(0, 0),
+                anchor: new window.google.maps.Point(16, 32),
+              }}
             />
           ))}
         </GoogleMap>
@@ -155,14 +160,21 @@ export default function MapApp() {
       {selectedLocation && (
         <div className={styles.popupContainer}>
           <div className={styles.popupContent}>
+            <hr className={styles.popupContentHr} />
             <button className={styles.closeButton} onClick={handleClosePopup}>
               &times;
             </button>
-            <Image src={selectedLocation.image} alt={selectedLocation.title} width={100} height={100} />
-            <h2>{selectedLocation.title}</h2>
-            <p>{selectedLocation.description}</p>
+
+            <h2 className={styles.popupContentTitle}  >{selectedLocation.title}</h2>
+            <p className={styles.popupContentOpeningHours}>{selectedLocation.openingHours}hrs - {selectedLocation.closingHours}hrs</p>
+            <p className={styles.popupContentOpeningDays}>{selectedLocation.openingDays}</p>
+            <p className={styles.popupContentSmallAvailability}>
+              <span className={styles.popupContentSmallAvailabilitySpan}>Space Available: </span>
+              {selectedLocation.smallAvailability} small bags, {selectedLocation.largeAvailability} large bags</p>
+            {/* <Image src={selectedLocation.image} alt='Image of the store' width={100} height={100} /> */}
+            <Image className={styles.popupContentImage} src='/storehobbs.png' alt='Image of the store' width={100} height={100} />
             <a href={selectedLocation.link} target="_blank" rel="noopener noreferrer" className={styles.visitLink}>
-              Visit {selectedLocation.title}
+              Book Now
             </a>
           </div>
         </div>

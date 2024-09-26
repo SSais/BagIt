@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-.containerForm {
+/* .form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,8 +29,16 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .formButton:hover {
     background-color: #ef4d44;
 }
   
   
+=======
+.form button:hover {
+    background-color: #b7dfff;
+    color: #000;
+    cursor: pointer;
+} */
+>>>>>>> 29fc8ade27040d9a1ee85108c48017ca3e98da2b
